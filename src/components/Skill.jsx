@@ -9,13 +9,13 @@ import { Text } from "@chakra-ui/react";
 export default function Skill() {
     return (
         <>
-            <Card p={5} bg={"deeppink"}>
+            <Card p={5} bg={"pink"}>
                 <Text fontSize={25}>
                     What I know:
                     <br />
                     <Stack direction={"row"} fontSize={18}>
                         <Card>
-                            <CardHeader>Frontend</CardHeader>
+                            <CardHeader>Front-end</CardHeader>
                             <Divider />
                             <CardBody>
                                 {[
@@ -45,7 +45,7 @@ export default function Skill() {
                             </CardBody>
                         </Card>
                         <Card>
-                            <CardHeader>Backend & Database</CardHeader>
+                            <CardHeader>Back-end & Database</CardHeader>
                             <Divider />
                             <CardBody>
                                 {[
@@ -73,7 +73,7 @@ export default function Skill() {
                             </CardBody>
                         </Card>
                         <Card>
-                            <CardHeader>Dev Tools & Framework</CardHeader>
+                            <CardHeader>Dev-Tools & Frameworks</CardHeader>
                             <Divider />
                             <CardBody>
                                 {[
@@ -99,7 +99,7 @@ export default function Skill() {
                             </CardBody>
                         </Card>
                         <Card>
-                            <CardHeader>Programming Languages</CardHeader>
+                            <CardHeader>Programming Langs</CardHeader>
                             <Divider />
                             <CardBody>
                                 {["Java", "Python", "C", "C++", "Dart"].map(

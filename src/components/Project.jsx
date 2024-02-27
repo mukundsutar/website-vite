@@ -1,6 +1,8 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { SimpleGrid } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 
 export default function Project() {
     const filmpedia = {
