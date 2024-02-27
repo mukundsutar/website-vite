@@ -9,43 +9,61 @@ import {
     Text,
 } from "@chakra-ui/react";
 import React from "react";
+import { Divider, Spacer, Link } from "@chakra-ui/react";
 
-export default function ProjectCard() {
+export default function ProjectCard({ projectInfo }) {
     return (
         <>
             <Card
-                data-type="Card"
                 variant="outline"
                 width={"300px"}
-                bg={'red'}
+                bg={"pink"}
                 borderColor={"black"}
             >
                 <Image
-                    data-type="Image"
                     alt="Caffe Latte"
-                    src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib"
+                    src={projectInfo.photo}
                     objectFit="cover"
                     maxW="100%"
-                ></Image>
-                <Stack data-type="Stack">
-                    <CardBody data-type="CardBody">
-                        <Heading data-type="Heading" size="md">
-                            The perfect latte
-                        </Heading>
-                        <Text data-type="Text" py="2">
-                            Caffè latte is a coffee beverage of Italian origin
-                            made with espresso and steamed milk.
-                        </Text>
+                />
+
+                <Stack height={"100%"}>
+                    <CardBody pb={0}>
+                        <Heading size="md">{projectInfo.name}</Heading>
+                        <Text>{projectInfo.description}</Text>
                     </CardBody>
-                    <CardFooter data-type="CardFooter" mt={-10}>
-                        <Button
-                            data-type="Button"
-                            type="button"
-                            variant="solid"
-                            colorScheme="blue"
-                        >
-                            Buy Latte
-                        </Button>
+
+                    <Divider />
+
+                    <CardFooter pt={2} pb={3} display={"flex"}>
+                        <Spacer />
+                        <Spacer />
+                        <Spacer />
+                        <Spacer />
+
+                        <Link href={projectInfo.link} isExternal>
+                            <Button
+                                type="button"
+                                variant="solid"
+                                colorScheme="green"
+                            >
+                                Demo
+                            </Button>
+                        </Link>
+
+                        <Spacer />
+
+                        <Link href={projectInfo.githubRepo} isExternal>
+                            <Button
+                                type="button"
+                                variant="solid"
+                                color="aliceblue"
+                                bg="#080808"
+                                _hover={{ color: "#080808", bg: "aliceblue" }}
+                            >
+                                GitHub
+                            </Button>
+                        </Link>
                     </CardFooter>
                 </Stack>
             </Card>
