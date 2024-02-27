@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { Flex, SimpleGrid, Spacer } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 
 export default function Project() {
     return (
@@ -16,6 +15,8 @@ export default function Project() {
                 pt={8}
                 pb={8}
             >
+                <ProjectCard />
+                <ProjectCard />
                 <ProjectCard />
                 <ProjectCard />
                 <ProjectCard />

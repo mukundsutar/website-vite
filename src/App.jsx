@@ -1,5 +1,11 @@
 import React from "react";
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import {
+    Tabs,
+    TabList,
+    TabPanels,
+    Tab,
+    TabPanel,
+} from "@chakra-ui/react";
 import Home from "./components/Home";
 import Project from "./components/Project";
 
@@ -14,9 +20,6 @@ export default function App() {
                     <Tab ml={3} mr={3} mt={2}>
                         Projects
                     </Tab>
-                    <Tab ml={3} mr={3} mt={2}>
-                        Resume
-                    </Tab>
                 </TabList>
 
                 <TabPanels>
@@ -25,9 +28,6 @@ export default function App() {
                     </TabPanel>
                     <TabPanel>
                         <Project />
-                    </TabPanel>
-                    <TabPanel>
-                        <p>three!</p>
                     </TabPanel>
                 </TabPanels>
             </Tabs>

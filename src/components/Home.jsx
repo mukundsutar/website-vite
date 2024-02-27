@@ -1,22 +1,16 @@
 import React from "react";
 
-import { Avatar, Text } from "@chakra-ui/react";
+import { Button, Link, Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { Box, Divider } from "@chakra-ui/react";
 import { Flex, Spacer } from "@chakra-ui/react";
-import { Card, CardBody, CardFooter, CardHeader } from "@chakra-ui/react";
-import {
-    Tag,
-    TagLabel,
-    TagLeftIcon,
-    TagRightIcon,
-    TagCloseButton,
-} from "@chakra-ui/react";
-import { Stack, HStack, VStack } from "@chakra-ui/react";
+import { Card, CardBody } from "@chakra-ui/react";
+import { Tag, TagLabel } from "@chakra-ui/react";
+import { HStack, VStack } from "@chakra-ui/react";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import { IconButton } from "@chakra-ui/react";
-import { Phone } from "@mui/icons-material";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import Skill from "./Skill";
 
 export default function Home() {
     return (
@@ -77,6 +71,12 @@ export default function Home() {
                                         aria-label="Search database"
                                         icon={<BsLinkedin />}
                                     />
+                                    <Link
+                                        href="src/assets/docs/Mukund_Sutar.pdf"
+                                        isExternal
+                                    >
+                                        <Button>Resume</Button>
+                                    </Link>
                                 </HStack>
                             </VStack>
 
@@ -106,134 +106,7 @@ export default function Home() {
 
                         <br />
 
-                        <Card p={5} bg={'deeppink'}>
-                            <Text fontSize={25}>
-                                What I know:
-                                <br />
-                                <Stack direction={"row"} fontSize={18}>
-                                    <Card>
-                                        <CardHeader>Frontend</CardHeader>
-                                        <Divider />
-                                        <CardBody>
-                                            {[
-                                                "HTML",
-                                                "CSS",
-                                                "JavaScript",
-                                                "React.js",
-                                                "Flutter",
-                                                "Material UI",
-                                                "Chakra UI",
-                                            ].map((skillName, index) => (
-                                                <Tag
-                                                    key={index}
-                                                    size={"lg"}
-                                                    variant="solid"
-                                                    colorScheme={
-                                                        skillName ===
-                                                            "React.js" ||
-                                                        skillName === "Flutter"
-                                                            ? "purple"
-                                                            : "teal"
-                                                    }
-                                                    m={1}
-                                                >
-                                                    {skillName}
-                                                </Tag>
-                                            ))}
-                                        </CardBody>
-                                    </Card>
-                                    <Card>
-                                        <CardHeader>
-                                            Backend & Database
-                                        </CardHeader>
-                                        <Divider />
-                                        <CardBody>
-                                            {[
-                                                "Node.js",
-                                                "Express.js",
-                                                "MySQL",
-                                                "MongoDB",
-                                                "Axios",
-                                            ].map((skillName, index) => (
-                                                <Tag
-                                                    key={index}
-                                                    size={"lg"}
-                                                    variant="solid"
-                                                    colorScheme={
-                                                        skillName ===
-                                                            "Node.js" ||
-                                                        skillName === "MongoDB"
-                                                            ? "purple"
-                                                            : "teal"
-                                                    }
-                                                    m={1}
-                                                >
-                                                    {skillName}
-                                                </Tag>
-                                            ))}
-                                        </CardBody>
-                                    </Card>
-                                    <Card>
-                                        <CardHeader>
-                                            Dev Tools & Framework
-                                        </CardHeader>
-                                        <Divider />
-                                        <CardBody>
-                                            {[
-                                                "Git",
-                                                "REST API",
-                                                "Jotai State Management",
-                                                "Zustand State Management",
-                                            ].map((skillName, index) => (
-                                                <Tag
-                                                    key={index}
-                                                    size={"lg"}
-                                                    variant="solid"
-                                                    colorScheme={
-                                                        skillName === "REST API"
-                                                            ? "purple"
-                                                            : "teal"
-                                                    }
-                                                    m={1}
-                                                >
-                                                    {skillName}
-                                                </Tag>
-                                            ))}
-                                        </CardBody>
-                                    </Card>
-                                    <Card>
-                                        <CardHeader>
-                                            Programming Languages
-                                        </CardHeader>
-                                        <Divider />
-                                        <CardBody>
-                                            {[
-                                                "Java",
-                                                "Python",
-                                                "C",
-                                                "C++",
-                                                "Dart",
-                                            ].map((skillName, index) => (
-                                                <Tag
-                                                    key={index}
-                                                    size={"lg"}
-                                                    variant="solid"
-                                                    colorScheme={
-                                                        skillName === "Java" ||
-                                                        skillName === "Dart"
-                                                            ? "purple"
-                                                            : "teal"
-                                                    }
-                                                    m={1}
-                                                >
-                                                    {skillName}
-                                                </Tag>
-                                            ))}
-                                        </CardBody>
-                                    </Card>
-                                </Stack>
-                            </Text>
-                        </Card>
+                        <Skill />
                     </CardBody>
                 </Card>
             </Box>
