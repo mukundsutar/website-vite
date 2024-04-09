@@ -10,6 +10,7 @@ import { HStack, VStack } from "@chakra-ui/react";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import { IconButton } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { TypeAnimation } from "react-type-animation";
 import Skill from "./Skill";
 
 export default function Home() {
@@ -32,23 +33,51 @@ export default function Home() {
 
                             <Text fontSize={40}>
                                 Hello there!
-                                <br />I am Mukund Sutar
+                                <br />I am <span> </span>
+                                <TypeAnimation
+                                    sequence={[
+                                        "Mukund Sutar",
+                                        2000,
+                                        "Software Engineer",
+                                        2000,
+                                        "🇮🇳 Web Dev",
+                                        2000,
+                                    ]}
+                                    wrapper="span"
+                                    cursor={true}
+                                    repeat={Infinity}
+                                    preRenderFirstString={true}
+                                    style={{
+                                        // fontSize: "2em",
+                                        display: "inline-block",
+                                    }}
+                                />
                             </Text>
 
                             <Spacer />
 
                             <VStack spacing={4}>
-                                <Tag
-                                    size="lg"
-                                    colorScheme="red"
-                                    borderRadius="full"
+                                <Link
+                                    href="mailto:mukundsutar1512@gmail.com"
+                                    isExternal
                                 >
-                                    <EmailIcon mr={2} />
+                                    <Tag
+                                        size="lg"
+                                        colorScheme="red"
+                                        borderRadius="full"
+                                    >
+                                        <EmailIcon mr={2} />
 
-                                    <TagLabel>
-                                        mukundsutar1512@gmail.com
-                                    </TagLabel>
-                                </Tag>
+                                        <TagLabel>
+                                            <Link
+                                                href="mailto:mukundsutar1512@gmail.com"
+                                                isExternal
+                                            >
+                                                mukundsutar1512@gmail.com
+                                            </Link>
+                                        </TagLabel>
+                                    </Tag>
+                                </Link>
 
                                 <Tag
                                     size="lg"

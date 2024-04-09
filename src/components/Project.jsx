@@ -81,7 +81,7 @@ export default function Project() {
         name: "SecureSpaghetti — No DB Copy-Paste app ",
         description:
             "An innovative app enabling secure data sharing via encrypted URLs, offering a streamlined and database-free experience. You can share Data entirely using only URLs.",
-        photo: "src/assets/img/project/GitHub/LocoSpot - Github.jpg",
+        photo: "src/assets/img/project/Copy Pasta Board.jpg",
         githubRepo: "https://github.com/mukundsutar/copy-pasta-board",
         link: "https://github.com/mukundsutar/copy-pasta-board",
     };
@@ -89,9 +89,9 @@ export default function Project() {
     const projectList = [
         filmpedia,
         securespagetti,
+        locospot,
         pokedex,
         wordle,
-        locospot,
         // atm_card,
         pinpong,
         tictactoe,

@@ -6,7 +6,15 @@ import Project from "./components/Project";
 export default function App() {
     return (
         <>
-            <Tabs width="100svw" height="100svh" isFitted overflowX={"hidden"}>
+            <Tabs
+                width="100svw"
+                height="100svh"
+                isFitted
+                overflowX={"hidden"}
+                position={"sticky"}
+                zIndex="sticky"
+                top={"20px"}
+            >
                 <TabList>
                     <Tab ml={3} mr={3} mt={2}>
                         About Me
