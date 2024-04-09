@@ -7,6 +7,7 @@ import {
     Image,
     Stack,
     Text,
+    Tooltip,
 } from "@chakra-ui/react";
 import React from "react";
 import { Divider, Spacer, Link } from "@chakra-ui/react";
@@ -29,8 +30,15 @@ export default function ProjectCard({ projectInfo }) {
 
                 <Stack height={"100%"}>
                     <CardBody pb={0}>
-                        <Heading size="md">{projectInfo.name}</Heading>
-                        <Text>{projectInfo.description}</Text>
+                        <Heading size="md" isTruncated>
+                            {projectInfo.name}{" "}
+                        </Heading>
+                        <Tooltip
+                            label={projectInfo.description}
+                            placement="auto"
+                        >
+                            <Text isTruncated>{projectInfo.description}</Text>
+                        </Tooltip>
                     </CardBody>
 
                     <Divider />

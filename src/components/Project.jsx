@@ -6,7 +6,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 
 export default function Project() {
     const filmpedia = {
-        name: "FilmPedia - Movie Database",
+        name: "FilmPedia — Movie Database",
         description:
             "Feature-rich movie database website utilizing TMDB API for comprehensive film exploration, offering users a robust platform.",
         photo: "src/assets/img/project/FilmPedia - Movie Database.png",
@@ -60,7 +60,7 @@ export default function Project() {
     };
 
     const wordle = {
-        name: "Wordle-Clone",
+        name: "Wordle—Clone",
         description:
             "A recreation of the popular word-guessing game, offering challenging puzzles for word enthusiasts.",
         photo: "src/assets/img/project/Wordle-Clone.png",
@@ -69,23 +69,33 @@ export default function Project() {
     };
 
     const locospot = {
-        name: "LocoSpot - Smart Tourist Guide using Machine Learning",
+        name: "LocoSpot — Smart Tourist Guide using Machine Learning",
         description:
             "Android app with a chatbot suggesting hidden local spots, powered by ML/NLP for enhanced responses, plus location-based features.",
-        photo: "src/assets/img/project/LocoSpot - Github.jpg",
+        photo: "src/assets/img/project/GitHub/LocoSpot - Github.jpg",
         githubRepo: "https://github.com/mukundsutar/loco-spot",
         link: "https://github.com/mukundsutar/loco-spot",
     };
 
+    const securespagetti = {
+        name: "SecureSpaghetti — No DB Copy-Paste app ",
+        description:
+            "An innovative app enabling secure data sharing via encrypted URLs, offering a streamlined and database-free experience. You can share Data entirely using only URLs.",
+        photo: "src/assets/img/project/GitHub/LocoSpot - Github.jpg",
+        githubRepo: "https://github.com/mukundsutar/copy-pasta-board",
+        link: "https://github.com/mukundsutar/copy-pasta-board",
+    };
+
     const projectList = [
         filmpedia,
-        atm_card,
-        pinpong,
+        securespagetti,
         pokedex,
-        tictactoe,
-        uselessfacts,
         wordle,
         locospot,
+        // atm_card,
+        pinpong,
+        tictactoe,
+        uselessfacts,
     ];
 
     return (
